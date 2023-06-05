@@ -1,3 +1,6 @@
+// Encodes a file as its Godel number.
+// This program is a work in progress.
+
 #include <stdio.h>
 #include <stdint.h>
 #include <unistd.h>
