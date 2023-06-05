@@ -9,6 +9,8 @@ Generates a continuous sequence of successive prime numbers, displaying five at 
 
 This program requires POSIX functions in order to run, so if you're on Windows, make sure you run it in Cygwin.
 
+Compilation: `gcc -o primes primes.c`
+
 Usage: `./primes`
 
 ## funcplot.r
@@ -24,5 +26,7 @@ Usage: `funcplot( function, minimum, maximum, step )`
 This is a proof of concept for Gödel numbering. It's a work in progress and is not finished yet, but when it's done, it will be able to encode any file as its Gödel number, using a product of prime numbers raised to the power of the 8-bit value stored in each byte. I also plan to create a decoder that will be able to recover a file from its Gödel number. Right now I've only managed to generate the terms of the Gödel number and store them in a text file. When the program is finished, these terms will be read from the file and multiplied together. Gödel numbers are huge, and can be hundreds or even thousands of digits. The program deals with this by using dc as a back-end to perform all the calculations, since dc is an arbitrary-precision calculator.
 
 As with primes.c, this program uses POSIX functions as well as external Unix commands. Therefore, Windows users will need to run it in Cygwin.
+
+Compilation: `gcc -o godel godel.c`
 
 Usage: `./godel filename` or `cat filename | ./godel`
